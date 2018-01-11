@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node .",
+    "build": "NODE_ENV=production next build",
     "start": "NODE_ENV=production node .",
-    "build": "next build"
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
