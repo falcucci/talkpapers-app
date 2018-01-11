@@ -21,9 +21,7 @@
     "next-routes": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "styled-components": "^2.4.0"
-  },
-  "devDependencies": {
+    "styled-components": "^2.4.0",
     "react-icons-kit": "^1.0.7"
   }
 }
