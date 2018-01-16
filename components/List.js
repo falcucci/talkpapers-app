@@ -54,7 +54,7 @@ export const Listitem = ({
 }) => (
   <ListItemStyled>
     <Header>
-      <Link route="event-detail" params={{ slug }}>
+      <Link route="events-detail" params={{ slug }}>
         <Title>{title}</Title>
       </Link>
     </Header>

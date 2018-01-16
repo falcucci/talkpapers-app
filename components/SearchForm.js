@@ -3,7 +3,7 @@ import { Icon } from 'react-icons-kit'
 import { basic_magnifier } from 'react-icons-kit/linea/basic_magnifier'
 
 const Form = styled.form`
-  display: flex;
+  display: block;
   max-width: 500px;
   padding: 0 20px;
   background-color: #f5f5f5;
@@ -28,7 +28,7 @@ const Input = styled.input`
 const Button = styled.button`
   padding: 10px 25px;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   
   transition: all 500ms;

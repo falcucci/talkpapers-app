@@ -1,32 +1,36 @@
-import styled, { injectGlobal } from 'styled-components'
+import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
+import { Logo } from './Logo'
 
-injectGlobal`
-@import url('https://fonts.googleapis.com/css?family=Roboto|Slabo+27px|Raleway');
-
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #1A1A1A;
-  line-height: 1.5;
-}
+export const HeaderTitle = styled(Logo)`
+  color: initial;
 `
 
-export default ({ backButton, children }) => (
+const Main = styled.main`
+  padding-top: 100px;
+  padding-bottom: 60px;
+`
+
+export default ({
+  title,
+  backButton,
+  hideMenu,
+  hideMenuSignIn,
+  hideMenuSignUp,
+  children
+}) => (
   <div>
     <Header
+      title={title}
       backButton={backButton}
+      hideMenu={hideMenu}
+      hideMenuSignIn={hideMenuSignIn}
+      hideMenuSignUp={hideMenuSignUp}
     />
-    <main style={{paddingTop: 50}}>
+    <Main>
       {children}
-    </main>
+    </Main>
     <Footer />
   </div>
 )

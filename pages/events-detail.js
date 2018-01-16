@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Link } from '../routes'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import PageHeader from '../components/PageHeader'
@@ -10,6 +11,11 @@ import { List, ListItem } from '../components/PapersList'
 const Title = styled.h1`
   font-size: 60px;
   font-family: 'Raleway', sans-serif;
+  margin-bottom: 40px;
+`
+const SubTitle = styled.h2`
+  font-size: 32px;
+  // font-family: 'Raleway', sans-serif;
   margin-bottom: 40px;
 `
 
@@ -25,14 +31,14 @@ export default props => (
       <title>PHP UK Conference 2018</title>
     </Head>
     <PageHeader>
-      <StyledContainer>
-        <Title>PHP UK Conference 2018</Title>
-        <Flex center>
-          <Box>
-            <p>PHP UK is pleased to announce the 13th Annual PHP UK conference; a 3-day event, 1 workshop day and 2 conference days with 3 great tracks, held at at The Brewery, in the heart of the City of London.</p>
-            <p>With over 700 delegates, speakers, and sponsors, PHP UK conference aims to deliver fantastic up-to-date content about PHP and related web technologies in a comfortable and professional setting. There are countless networking opportunities to engage with international speakers and delegates, which makes the event one you won’t want to miss.</p>
-          </Box>
-          <Box style={{paddingLeft: 30, textAlign: 'center'}}>
+      <Title>PHP UK Conference 2018</Title>
+      <Flex center>
+        <Box>
+          <p>PHP UK is pleased to announce the 13th Annual PHP UK conference; a 3-day event, 1 workshop day and 2 conference days with 3 great tracks, held at at The Brewery, in the heart of the City of London.</p>
+          <p>With over 700 delegates, speakers, and sponsors, PHP UK conference aims to deliver fantastic up-to-date content about PHP and related web technologies in a comfortable and professional setting. There are countless networking opportunities to engage with international speakers and delegates, which makes the event one you won’t want to miss.</p>
+        </Box>
+        <Box style={{padding: 30, textAlign: 'center'}}>
+          <Link route="events-submit-papers" params={{slug: 112321}}>
             <Button
               round
               outline
@@ -40,12 +46,12 @@ export default props => (
             >
               Submit paper
             </Button>
-          </Box>
-        </Flex>
-      </StyledContainer>
+          </Link>
+        </Box>
+      </Flex>
     </PageHeader>
     <Container>
-      <h1>Papers</h1>
+      <SubTitle>Papers</SubTitle>
       <List>
         <ListItem
           title={`Vim em 5 minutos`}

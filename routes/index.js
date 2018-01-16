@@ -1,4 +1,5 @@
 const routes = module.exports = require('next-routes')()
 
 routes
-  .add('event-detail', '/:slug', 'event-detail')
+  .add('events-detail', '/events/:slug', 'events-detail')
+  .add('events-submit-papers', '/events/:slug/submit-papers', 'submit-papers')

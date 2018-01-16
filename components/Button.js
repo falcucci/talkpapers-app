@@ -3,14 +3,16 @@ import { Link } from '../routes'
 import colors from '../theme/colors'
 
 const Button = styled.a`
-  display: inline-block;
-  padding: 7px 15px;
+  display: inline-flex;
+  padding: 7px 20px;
+  height: 39px;
   color: #fff;
   background-color: ${colors.blue};
   border: 2px solid ${colors.blue};
   border-radius: 4px;
   font-size: 14px;
   font-weight: 300;
+  justify-content: center;
   cursor: pointer;
   transition: all 500ms;
 
@@ -34,12 +36,17 @@ const Button = styled.a`
     }
   `}
 
+  ${props => props.block && css`
+    display: flex;
+  `}
+
   ${props => props.round && css`
     border-radius: 20px;
   `}
 
   ${props => props.large && css`
-    padding: 15px 30px;
+    padding: 15px 40px;
+    height: 60px;
     font-size: 18px;
     border-radius: 50px;
   `}

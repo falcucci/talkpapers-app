@@ -10,7 +10,8 @@ const ListItemStyled = styled.article`
 const ListIcon = styled.aside`
   display: flex;
   flex-direction: column;
-  width: 120px;
+  max-width: 120px;
+  width: 100%;
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -61,7 +62,7 @@ export const ListItem = ({
     <ListIcon>
       <Icon
         icon={basic_heart}
-        size={24}
+        size={32}
         style={{marginBottom: 3}}
       />
       <small>{votes}</small>

@@ -9,6 +9,14 @@ export const Flex = styled.div`
     justify-content: flex-start;
   `}
 
+  ${props => props.column && css`
+    flex-direction: column;
+  `}
+
+  ${props => props.row && css`
+    flex-direction: row;
+  `}
+
   ${props => props.center && css`
     align-items: center;
     justify-content: center;

@@ -16,12 +16,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "draft-js": "^0.10.4",
     "express": "^4.16.2",
+    "final-form": "^3.1.0",
+    "firebase": "^4.8.2",
+    "firebaseui": "^2.5.1",
     "next": "^4.2.1",
     "next-routes": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-final-form": "^2.2.0",
+    "react-firebaseui": "^1.0.10",
+    "react-icons-kit": "^1.0.7",
     "styled-components": "^2.4.0",
-    "react-icons-kit": "^1.0.7"
+    "styled-spinkit": "^0.2.0",
+    "validate.js": "^0.12.0"
   }
 }

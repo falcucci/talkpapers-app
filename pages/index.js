@@ -2,13 +2,14 @@ import Head from 'next/head'
 import styled from 'styled-components';
 import Container from '../components/Container'
 import Layout from '../components/Layout'
+import Logo from '../components/Logo'
 import PageHeader from '../components/PageHeader'
 import SearchForm from '../components/SearchForm'
 import { Flex, Box } from '../components/FlexBox'
 import { List, Listitem } from '../components/List'
 
 export default () => (
-  <Layout>
+  <Layout title={<Logo />}>
     <Head>
       <title>The easier way to manage your CFP - talkpapers</title>
     </Head>

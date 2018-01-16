@@ -7,7 +7,7 @@ import Logo from './Logo'
 import Menu from './Menu'
 import Button from './Button'
 
-export const Header = styled.header`
+export const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   right: 0;
@@ -28,14 +28,25 @@ const StyledBackButton = styled(BackButton)`
   cursor: pointer;
 `
 
-export default ({ backButton }) => (
-  <Header>
+const Header= ({
+  title,
+  backButton,
+  hideMenu,
+  hideMenuSignIn,
+  hideMenuSignUp
+}) => (
+  <StyledHeader>
     <Container flex>
-      {!backButton
-        ? <Logo />
-        : <StyledBackButton />
-      }
-      <Menu />
+      {backButton && <StyledBackButton />}
+      {title}
+      {!hideMenu && (
+        <Menu
+          hideMenuSignIn={hideMenuSignIn}
+          hideMenuSignUp={hideMenuSignUp}
+        />
+      )}
     </Container>
-  </Header>
+  </StyledHeader>
 )
+
+export default Header
